@@ -1,0 +1,9 @@
+.logo__link {
+    color: white;
+    text-decoration: none;
+    transition: opacity 400ms;
+    &:hover {
+        color: white;
+        opacity: 0.8;
+    }
+}
