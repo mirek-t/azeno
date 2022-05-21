@@ -1,8 +1,7 @@
 import React from 'react';
-import './App.scss';
-import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
-import Button from 'react-bootstrap/Button';
+
+import './App.scss';
 
 function App() {
     return (
