@@ -13,7 +13,7 @@ function Header(props) {
                         Azeno
                     </Link>
                 </Navbar.Brand>
-                <Nav className="me-auto">
+                <Nav className="ms-auto">
                     <NavLinkWrapper to="/train">Train</NavLinkWrapper>
                     <NavLinkWrapper to="/profile">Profile</NavLinkWrapper>
                 </Nav>
