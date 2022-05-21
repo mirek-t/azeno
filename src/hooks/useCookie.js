@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
 const useCookie = (cookieName) => {
-    const [cookie, setCookie] = useState('');
+    const [cookie, setCookie] = useState(undefined);
 
     useEffect(() => {
         const val = document.cookie

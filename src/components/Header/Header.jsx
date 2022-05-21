@@ -4,7 +4,7 @@ import NavLinkWrapper from '../utils/NavLinkWrapper';
 import { Link } from 'react-router-dom';
 import './Header.scss';
 
-function Header(props) {
+function Header() {
     return (
         <Navbar bg="dark" variant="dark">
             <Container>
