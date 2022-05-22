@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import { Card, Button } from 'react-bootstrap';
+import { Button, Card } from 'react-bootstrap';
+
+import './Question.scss';
 
 function Question() {
     const [question] = useState('Czy w JS wszystko jest obiektem?');
@@ -14,19 +16,31 @@ function Question() {
     }
 
     return (
-        <Card onClick={handleAnswer}>
-            <Card.Header as="h5">Javascript</Card.Header>
-            <Card.Body>
-                <Card.Text>{!toggle ? question : answer}</Card.Text>
-                {toggle && (
-                    <>
-                        <Button variant="primary">Wiedziałem</Button>
-                        <Button variant="primary">Nie byłem pewny</Button>
-                        <Button variant="primary">Nie wiedziałem</Button>
-                    </>
-                )}
-            </Card.Body>
-        </Card>
+        <div className={toggle ? 'flip-card active' : 'flip-card'} onClick={handleAnswer}>
+            <div className="flip-card-inner">
+                <div className="flip-card-front">
+                    <Card>
+                        <Card.Header as="h5">Javascript</Card.Header>
+                        <Card.Body className="card-body">
+                            <Card.Text>{question}</Card.Text>
+                        </Card.Body>
+                    </Card>
+                </div>
+                <div className="flip-card-back">
+                    <Card>
+                        <Card.Header as="h5">Javascript</Card.Header>
+                        <Card.Body className="card-body">
+                            <Card.Text>{answer}</Card.Text>
+                            <div className="answer-btn">
+                                <Button variant="primary">Wiedziałem</Button>
+                                <Button variant="primary">Nie byłem pewny</Button>
+                                <Button variant="primary">Nie wiedziałem</Button>
+                            </div>
+                        </Card.Body>
+                    </Card>
+                </div>
+            </div>
+        </div>
     );
 }
 
