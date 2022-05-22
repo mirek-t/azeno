@@ -1,7 +1,68 @@
-import React from 'react';
+import React, { useState } from 'react';
+
+import { Card, Form, Button } from 'react-bootstrap';
 
 function Login() {
-    return <div>Login</div>;
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [remember, setRemember] = useState(false);
+
+    function handleEmail(e) {
+        setEmail(e.target.value);
+    }
+
+    function handlePassword(e) {
+        setPassword(e.target.value);
+    }
+
+    function handleRemember(e) {
+        setRemember(e.target.checked);
+    }
+
+    function submitForm(e) {
+        e.preventDefault();
+        console.log(email, password, remember);
+    }
+
+    return (
+        <Card>
+            <Card.Body>
+                <Card.Title>Login</Card.Title>
+                <Form onSubmit={submitForm} className="d-flex flex-column">
+                    <Form.Group className="mb-3" controlId="formBasicEmail">
+                        <Form.Label>Email</Form.Label>
+                        <Form.Control
+                            type="email"
+                            placeholder="Enter email"
+                            value={email}
+                            onChange={handleEmail}
+                        />
+                    </Form.Group>
+
+                    <Form.Group className="mb-3" controlId="formBasicPassword">
+                        <Form.Label>Password</Form.Label>
+                        <Form.Control
+                            type="password"
+                            placeholder="Password"
+                            value={password}
+                            onChange={handlePassword}
+                        />
+                    </Form.Group>
+                    <Form.Group className="mb-3" controlId="formBasicCheckbox">
+                        <Form.Check
+                            type="checkbox"
+                            label="Remember me"
+                            checked={remember}
+                            onChange={handleRemember}
+                        />
+                    </Form.Group>
+                    <Button variant="dark" type="submit">
+                        Login
+                    </Button>
+                </Form>
+            </Card.Body>
+        </Card>
+    );
 }
 
 export default Login;
