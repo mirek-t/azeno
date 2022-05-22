@@ -29,6 +29,7 @@ function App() {
                             <Route path="/train" element={<Train />} />
                             <Route path="/login" element={<Login />} />
                             <Route path="/register" element={<Register />} />
+                            <Route path="/train/:id" element={<h2>It works</h2>} />
                         </Routes>
                     </Col>
                 </Row>
