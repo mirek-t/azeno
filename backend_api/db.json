@@ -38,16 +38,21 @@
     "cards": [
         {
             "id": 1,
-            "name": "elo1"
+            "category": 1,
+            "question": "Pytanie o śledziach?",
+            "answer": "Odpowiedź o śledziach."
         },
         {
             "id": 2,
-            "name": "elo2"
+            "category": 2,
+            "question": "Czym różni się let od const?",
+            "answer": "Const jest niemodyfikowalny."
         },
         {
             "id": 3,
-            "category": 1,
-            "name": "elo3"
+            "category": 3,
+            "question": "Czy kontekst api służy do trzymania stanu w komponencie?",
+            "answer": "Do trzymania stanu komponentu używamy hooks bądź this.state."
         }
     ],
     "decks": [

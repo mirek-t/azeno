@@ -53,6 +53,12 @@
     justify-content: space-around;
     button {
         margin: 10px;
-        width: 100%;
+        width: calc(100% - 20px);
+        &:first-child {
+            margin-left: 0;
+        }
+        &:last-child {
+            margin-right: 0;
+        }
     }
 }
